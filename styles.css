@@ -1,0 +1,448 @@
+/* Importa a fonte "Antonio" do Google Fonts com diferentes pesos (100 a 700) */
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
+
+/* Define variáveis de cores e a fonte padrão para o documento */
+:root {
+  --cor-primaria: #FFDEB9;
+  --cor-secundaria: #F99417;
+  --cor-terciaria: #5D3891;
+  --cor-hover: #E8E2E2;
+  --cor-noturno: #1e1f26;
+  --cor-fundo-claro: #F5D5AE; /* Adicionando a cor de fundo para o modo claro */
+  --fonte: "Antonio", sans-serif;
+}
+
+/* Define um estilo padrão para todos os elementos, zerando margens e preenchimentos e configurando a caixa-modelo como border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*A propriedade box-sizing: border-box; faz com que o navegador inclua o preenchimento e a borda dentro das dimensões totais especificadas para um elemento HTML.*/
+}
+
+/* Estiliza o corpo do documento, definindo altura, cor de fundo e texto, bem como uma transição para alterações de estilo */
+body {
+  background-color: var(--cor-fundo-claro);
+  height: 100vh; /*Define a altura do elemento como 100% da altura da viewport (a altura visível da janela do navegador).*/
+  font-family: var(--fonte);
+  transition: background-color 500ms; /*Aplica uma transição suave à mudança da cor de fundo do elemento ao longo de 500 milissegundos (0,5 segundo), proporcionando uma*/
+}
+
+/* Estiliza o cabeçalho da página, definindo preenchimento, espaçamento entre elementos e cor de fundo */
+.cabecalho {
+  padding: 1%; /*Define um preenchimento interno de "2%" para todos os lados do elemento, criando um espaço interno ao redor do conteúdo do elemento.*/
+  gap: 8px; /*Define um espaçamento de 'x' pixels entre os filhos diretos do elemento, como em um contêiner flexível ou uma grade, facilitando a visualização e a separação visual entre os elementos. Este valor afeta principalmente os elementos filhos que são exibidos como grade ou flexbox.*/
+  background-color: var(--cor-secundaria);
+}
+
+.cabecalho__menu__link { /*Inicia a definição de estilo para os elementos com a classe*/
+  font-size: 2rem; /*Define o tamanho da fonte para os elementos com a classe */
+  text-decoration: none; /* Remove a decoração de texto dos elementos com a classe */
+  color: var(--cor-terciaria); /*Define a cor do texto dos elementos com a classe */
+  display: inline-table; /*Define o elemento como uma tabela em linha*/
+  color: var(--cor-terciaria);
+ 
+}
+
+.cabecalho__menu :hover { /*uando é alvo de uma ação de hover, ou seja, quando o cursor do mouse está sobre ele.*/
+  color: var(--cor-primaria);
+  background-color: transparent;
+  
+}
+
+#toggle {
+  font-size: 2rem; /* Defina o tamanho desejado para o emoticon de lâmpada */
+  color: #898484;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/*modo noturno
+Este bloco de código CSS define as variáveis de cor para o modo noturno, que serão aplicadas quando o atributo data-theme do elemento HTML for definido como "dark". Cada variável corresponde a uma cor específica utilizada no modo noturno:*/
+[data-theme="dark"] {
+  --bg-color : #1e1f26;
+  --cor-primaria: #FFDEB9;
+  --cor-secundaria: #F99417;
+  --cor-terciaria: #5D3891;
+  --cor-hover: #E8E2E2;
+  --cor-noturno: #2d2d2d00;
+  
+  background-color: var(--cor-noturno); /* Adicionando o background-color ao modo noturno */
+}
+
+/* Estiliza o corpo do documento para o modo noturno */
+[data-theme="dark"] body {
+  background-color: var(--bg-color); /* Alterando a cor de fundo do corpo no modo noturno */
+}
+/* Estiliza os elementos para o modo noturno */
+[data-theme="dark"] #toggle {
+  filter: grayscale(100%); /* Aplica o filtro de escala de cinza quando o modo noturno estiver ativado */
+  font-size: 2rem; /* Defina o tamanho desejado para o emoticon de lâmpada */
+}
+[data-theme="dark"] .cabecalho {
+  background-color: #5D3891;  
+}
+[data-theme="dark"] .cabecalho__menu__link {
+  color: var(--cor-secundaria); /*Define a cor do texto dos elementos com a classe */
+}
+
+/* Estiliza os elementos para o modo noturno */
+[data-theme="dark"] .cabecalho {
+  background-color: #5D3891;  
+}
+
+[data-theme="dark"] .cabecalho__menu__link {
+  color: var(--cor-secundaria); /*Define a cor do texto dos elementos com a classe */
+}
+
+[data-theme="dark"] .cabecalho__menu :hover {
+color: var(--cor-primaria);
+}
+
+[data-theme="dark"] .rodape {
+  background-color: var(--cor-terciaria);
+  color: var(--cor-secundaria);
+}
+
+[data-theme="dark"] .titulo_contato {
+  font-family: var(--fonte);
+  font-size: 2rem;
+  color: var(--cor-secundaria);
+}
+
+[data-theme="dark"] .lista__link {
+  color: var(--cor-secundaria);
+}
+
+[data-theme="dark"] .lista__link a {
+  color: var(--cor-secundaria);
+}
+
+[data-theme="dark"] .lista__link a:hover {
+  color: var(--cor-fundo-claro);  
+}
+
+nav { /* usado para representar uma seção de navegação em um documento web. Ele é usado para agrupar links ou outros elementos de navegação para ajudar os usuários a se moverem dentro do site.*/
+  display:flow-root; /* Define o elemento nav para ser exibido como um bloco, ocupando toda a largura disponível horizontalmente.*/
+  padding: 2rem 1.5rem; /*Define o preenchimento interno do elemento nav. O valor 2rem define o preenchimento superior e inferior, enquanto 1.5rem define o preenchimento esquerdo e direito.*/
+  margin: 0 auto; /* Define margens automáticas nas laterais do elemento nav, fazendo com que ele seja centralizado horizontalmente em relação ao seu contêiner pai.*/
+  text-align: center; /*Define o alinhamento horizontal do texto dentro do elemento nav como centralizado. Isso afetará qualquer texto diretamente dentro do elemento nav e qualquer elemento filho que não tenha uma configuração de alinhamento específica.*/
+}
+
+nav ul li { /*está estilizando elementos <li> que são filhos diretos de uma lista <ul> dentro de um elemento <nav>.*/
+  list-style: none; /* Remove os marcadores de lista padrão.*/
+  display: inline;/*Define os itens da lista como elementos de linha, permitindo que eles sejam exibidos horizontalmente, um ao lado do outro.*/
+  line-height: 3.5rem;/*: Define a altura da linha para 2.5 vezes o tamanho da fonte, o que controla o espaçamento entre as linhas de texto dentro dos itens da lista.*/
+  padding: 1.5rem 1.75rem;/*Define o preenchimento superior e inferior como 0.5 rem e o preenchimento esquerdo e direito como 0.75 rem, criando espaçamento interno ao redor do conteúdo do item da lista.*/
+  margin: 2rem;/*Define a margem externa de 1 rem em todas as direções ao redor de cada item da lista, criando espaço entre os itens da lista.*/
+  transition: all 250ms;/* Adiciona uma transição suave de 250 milissegundos para todas as propriedades CSS afetadas por mudanças de estilo, proporcionando uma animação suave ao interagir com os itens da lista.
+  */
+  cursor: pointer;/*Define o cursor do mouse como ponteiro ao passar sobre os itens da lista, indicando que eles são clicáveis.*/
+}
+
+nav ul li:hover {
+  background-color: var(--cor-secundaria); /* Corrigido para usar a variável correta */
+  color: var(--cor-terciaria); /* Corrigido para usar a variável correta */
+}
+
+.apresentacao {
+  padding: 6% 18%;
+  display: flex; /* alinha o texto à esquerda dentro do elemento.*/
+  color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo {
+  width: 100%;
+  flex-direction: row;
+  text-align: center;
+  color: var(--cor-secundaria);
+}
+
+.apresentacao__conteudo__titulo {
+  text-align: center;
+  color: var(--cor-secundaria);
+}
+
+.titulo__destaque {
+  color: var(--cor-secundaria);
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.texto-colorido {
+  color: var(--cor-secundaria);
+  text-decoration: solid;
+  text-align: center;
+}
+
+.apresentacao__conteudo__texto {
+  font-size: 4.5rem;
+  color: var(--cor-terciaria);
+  text-align: center;
+}
+
+.apresentacao__imagem {
+  padding: 2% 2%;
+  align-items: center;
+}
+
+.apresentacao__conteudo__2 {
+  padding: 6% 12%;
+  text-align: center;
+}
+
+.sobre__mim {
+  margin: 10px;
+  text-align: center;
+  font-size: 50px;
+  color: var(--cor-secundaria);
+}
+
+.apresentacao__conteudo__sobremim {
+  width: 100%;
+  font-size: 28px;
+  color: var(--cor-terciaria);
+  display:inline;
+}
+
+.apresentacao__links { /*links redes sociais*/
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+  margin: 16px;
+  text-align: center;
+  font-size: 50px;
+  color: var(--cor-secundaria);
+}
+
+.apresentacao__links__navegacao {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  border: var(--cor-terciaria) solid 3px;
+  width: 10%;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 20px 0;
+  text-decoration: none;
+  color: var(--cor-secundaria);
+}
+
+.apresentacao__links__navegacao img {
+  width: 30px;
+  height: auto;
+}
+
+.apresentacao__links__navegacao:hover {
+  transform: scale(1.1);
+}
+
+.certificados {
+  padding: 28px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+  
+.container {  
+padding: 8px 10px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+gap: 32px;
+}
+
+.apresentacao__links__qualificacoes {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  border: var(--cor-terciaria) solid 3px;
+    text-align: center;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 20px 10;
+  text-decoration: none;
+  color: var(--cor-secundaria);
+}
+
+.apresentacao__links__qualificacoes img {
+  /* Estilos para as imagens dentro dos links */
+  /* Por exemplo: */
+  width: 30px; /* Define a largura da imagem */
+  height: 30px; /* Define a altura da imagem */
+  margin-right: 5px; /* Adiciona margem à direita para separar a imagem do texto */
+  /* Adicione outros estilos conforme necessário */
+}
+
+.apresentacao__links__qualificacoes:hover {
+transform: scale(1.1);
+}
+
+h2 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+p {
+ /* line-height: 1.5rem;*/
+  margin: 1rem auto 0 auto;
+  max-width: 500px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--cor-secundaria);
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor-secundaria);
+  font-size: 1rem;
+  background-color: transparent;
+  transition: all 250ms;
+  padding: 0.75rem 2rem;
+}
+
+a:hover {
+  background-color: var(--cor-primaria);
+  color: var(--cor-terciaria);
+}
+/* Carrossel */
+.lista__certificados {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 100vh; 
+}
+
+.carrossel {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 100vh;  
+}
+
+.image-list {
+  padding: 20px 50px;
+  list-style: none;
+  display: flex;
+   gap: 2px; /* Espaçamento entre as imagens */
+}
+
+.image-item img {
+  width: 100%; /* Ajusta a largura da imagem para preencher a coluna */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+
+/* Adiciona um efeito de escala às imagens individuais quando o mouse passa sobre elas */
+.image-item img:hover {
+   transform: scale(3.1);
+   transition: transform 0.3s ease; /* Adiciona uma transição suave */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 1.0); /* Sombreamento suave */
+}
+
+.apresentacao__conteudo__projetos__titulo {
+  text-align: center;
+  font-size: 50px;
+  color: var(--cor-secundaria);
+}
+
+.projetos {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.apresentacao__conteudo__projetos {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  font-size: 22px;
+  color: var(--cor-terciaria);
+}
+
+#link__topo {
+  text-decoration: none;
+  color: var(--cor-fundo-claro);
+  background-color: var(--cor-secundaria);
+  padding: 10px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  box-shadow: 1px 1px 10px #1e1f26;
+  border-radius: 50%;
+  opacity: 50%;
+}
+
+#link__topo:hover {
+  transform: scale(1.1);
+  opacity: 100%;
+}
+
+.rodape {
+  padding: 60px;
+  color: var(--cor-terciaria);
+  background-color: var(--cor-secundaria);
+  text-align: center;
+  list-style-type: none;
+}
+
+.titulo_contato {
+  font-family: var(--fonte);
+  font-size: 2rem;
+  color:var(--cor-terciaria);
+}
+
+.lista__link a {
+  color: var(--cor-terciaria);
+  margin-left: 1em;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-top: 1em;
+}
+
+.lista__link {
+  list-style-type: none;
+  
+}
+
+.lista__link :hover {
+  color: var(--cor-fundo-claro);
+  background-color: transparent;
+  color: var(--cor-primaria);
+}
+
+
+
+
+@media (max-width: 1200px) {
+  .cabecalho {
+  padding : 10%;
+  }
+  .cabecalho__menu {
+  justify-content : center;
+  }
+  .apresentacao {
+  flex-direction : column-reverse;
+  padding : 5%;
+  }
+  .apresentacao__conteudo {
+  width : auto;
+  }
+}
