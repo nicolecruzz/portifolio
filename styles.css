@@ -120,6 +120,14 @@ color: var(--cor-primaria);
   color: var(--cor-fundo-claro);  
 }
 
+[data-theme="dark"] .apresentacao__conteudo__sobremim {
+  width: 100%;
+  font-size: 30px;
+  color: var(--cor-fundo-claro);
+  display:inline;
+  font-family: var(--fonte);
+}
+
 nav { /* usado para representar uma seção de navegação em um documento web. Ele é usado para agrupar links ou outros elementos de navegação para ajudar os usuários a se moverem dentro do site.*/
   display:flow-root; /* Define o elemento nav para ser exibido como um bloco, ocupando toda a largura disponível horizontalmente.*/
   padding: 2rem 1.5rem; /*Define o preenchimento interno do elemento nav. O valor 2rem define o preenchimento superior e inferior, enquanto 1.5rem define o preenchimento esquerdo e direito.*/
@@ -184,7 +192,17 @@ nav ul li:hover {
   align-items: center;
 }
 
-.apresentacao__conteudo__2 {
+.apresentacao__conteudo__2{
+  padding: 0% 18%;
+  text-align: center;
+  }
+
+.sobre__mim {
+  margin: 2px;
+  text-align: center;
+  font-size: 50px;
+  color: var(--cor-secundaria);
+  border-bottom: var(--cor-secundaria);
   padding: 6% 12%;
   text-align: center;
 }
@@ -198,7 +216,7 @@ nav ul li:hover {
 
 .apresentacao__conteudo__sobremim {
   width: 100%;
-  font-size: 28px;
+  font-size: 30px;
   color: var(--cor-terciaria);
   display:inline;
 }
@@ -264,6 +282,7 @@ gap: 32px;
   justify-content: center;
   gap: 16px;
   border: var(--cor-terciaria) solid 3px;
+  text-align: center;
     text-align: center;
   border-radius: 10px;
   font-weight: 600;
@@ -287,6 +306,9 @@ transform: scale(1.1);
 
 h2 {
   font-size: 5rem;
+  margin: 1rem 0;
+  font-family: var();
+  color: var(--cor-secundaria);
   font-weight: 700;
   margin: 1rem 0;
 }
@@ -343,6 +365,7 @@ a:hover {
 
 /* Adiciona um efeito de escala às imagens individuais quando o mouse passa sobre elas */
 .image-item img:hover {
+   transform: scale(2.1);
    transform: scale(3.1);
    transition: transform 0.3s ease; /* Adiciona uma transição suave */
    box-shadow: 0 0 10px rgba(0, 0, 0, 1.0); /* Sombreamento suave */
@@ -393,8 +416,15 @@ a:hover {
   opacity: 100%;
 }
 
+.link__contato {
+  color: var(--cor-terciaria);
+  height: 100vh; /*Define a altura do elemento como 100% da altura da viewport (a altura visível da janela do navegador).*/
+  font-family:var (--fonte);
+}
+
+
 .rodape {
-  padding: 60px;
+  padding: 20px;
   color: var(--cor-terciaria);
   background-color: var(--cor-secundaria);
   text-align: center;
@@ -403,8 +433,12 @@ a:hover {
 
 .titulo_contato {
   font-family: var(--fonte);
-  font-size: 2rem;
+  font-size: 1rem;
   color:var(--cor-terciaria);
+}
+
+.titulo_contato:hover {
+  transform: scale(1.1);
 }
 
 .lista__link a {
@@ -427,9 +461,6 @@ a:hover {
   background-color: transparent;
   color: var(--cor-primaria);
 }
-
-
-
 
 @media (max-width: 1200px) {
   .cabecalho {
