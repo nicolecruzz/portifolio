@@ -4,114 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título da página e ícone -->
-    <title> Portfólio Nicole</title>
-    <!-- Importação dos arquivos de estilo CSS e JavaScript -->
+    <title>Portfólio Nicole</title>
     <link rel="stylesheet" href="./styles.css">
-    <!-- O arquivo js.js não deve ser incluído como um link de estilo, mas sim como um script -->
     <script src="./js.js" defer></script> <!-- Adicione o atributo defer para garantir que o script seja carregado após o DOM -->
 </head>
 <body>
-    <!-- Cabeçalho da página -->
     <header class="cabecalho"> 
-        <!-- Menu de navegação -->
-        <nav class="cabecalho__menu">
-            <!-- Links para diferentes seções da página -->
-            <a class="cabecalho__menu__link" href="index.html"> HOME </a>
-            <a class="cabecalho__menu__link" href="#sobre-mim"> SOBRE MIM </a>
-            <a class="cabecalho__menu__link" href="#certificados"> QUALIFICAÇÕES </a>
-            <a class="cabecalho__menu__link" href="#projetos"> PROJETOS </a>           
-            <a class="cabecalho__menu__link" href="#contato"> CONTATO </a>
-            <!-- Botão de alternância de modo claro/escuro -->
-            <div class="modo-noturno">
-                <ul>
-                    <li id="toggle">💡</li>
-                </ul>
-            </div>
-        </nav>
+        <div class="area">
+            <nav class="main-menu">
+                <ul>                         
+                    <li><a class="cabecalho__menu__link" href="index.html">HOME</a></li>
+                    <li><a class="cabecalho__menu__link" href="#sobre-mim">SOBRE MIM</a></li>
+                    <li><a class="cabecalho__menu__link" href="#certificados">QUALIFICAÇÕES E PROJETOS</a></li>
+                    <li><a class="cabecalho__menu__link" href="https://linktr.ee/niicolecruz">CONTATO</a></li>
+                </ul>                
+            </nav>
+        </div>
     </header>
+
+    <div class="modo-noturno">
+        <li id="toggle">💡</li>                
+    </div>
+
     <!-- Seção principal de apresentação -->
     <main class="apresentacao">
         <!-- Conteúdo da apresentação -->
         <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo"> Hello World!! </h1>
-            <p class="apresentacao__conteudo__texto"> BOAS VINDAS AO MEU <strong><span class="texto-colorido"> PORTFÓLIO </span></strong></p>
+            <h1 class="apresentacao__conteudo__titulo">Hello World!!</h1>
+            <p class="apresentacao__conteudo__texto">
+                BOAS VINDAS AO MEU <strong><span class="texto-colorido">PORTFÓLIO</span></strong>
+            </p>
+            <img class="apresentacao__imagem" src="./imagem/Nicole.png" width="380" height="380" alt="Foto Nicole">
         </section>
-        <!-- Imagem da apresentação -->
-        <img class="apresentacao__imagem" src="./imagem/Nicole.jpg" width="380" height="380" alt="Foto Nicole">
     </main> 
+
     <!-- Seção "Sobre mim" -->
     <section id="sobre-mim" class="apresentacao__conteudo__2">
-        <h1 class="sobre__mim"> Sobre mim </h1>
-        <p class="apresentacao__conteudo__sobremim">Olá, me chamo Nicole, tenho 32 anos,
-             sou casada há uma década e mãe de um garotinho incrível. 
-             Já desbravei diversas áreas profissionais, inclusive dando vida a uma barbearia,
-              onde me divirto explorando minha veia criativa e cuidando do marketing. 
-              Recentemente, mergulhei nos estudos em programação, e estou ansiosa para expandir meu horizonte na tecnologia.
-               Estou animada para compartilhar essa jornada digital contigo!</p>
+        <h1 class="sobre__mim">Sobre mim</h1>
+        <p class="apresentacao__conteudo__sobremim">
+            Olá, me chamo Nicole, tenho 32 anos, sou casada há uma década e mãe de um garotinho incrível. 
+            Já desbravei diversas áreas profissionais e atualmente cuido das redes sociais e divulgação da nossa barbearia,
+            onde descobri a paixão pelo marketing. Recentemente mergulhei nos estudos de programação, onde posso unir minha paixão pelo bonito com o funcional.
+        </p>
+        <p class="apresentacao__conteudo__sobremim">
+            Busco uma oportunidade de aprimorar minhas habilidades nessa área e estou animada para colaborar em projetos inspiradores, contribuindo com minha criatividade e dedicação.
+        </p>
+        <p class="apresentacao__conteudo__sobremim"></br>
+            👩🏼‍💻 Estou aprendendo:  
+            <img align="center" alt="Nic-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+            <img align="center" alt="Nic-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"/>
+            <img align="center" alt="Nic-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"/>
+            <img align="center" alt="Nic-Git" height="30" width="40" src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white"/> 
+            <img align="center" alt="Nic-Csharp" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"/>
+        </p>
+        <div class="skill">
+            <img class="img_skill" src="./imagem/SKILL.png" width="300" height="300" alt="skill">
+        </div>
     </section>
-      <!-- Seção "Redes Sociais" -->
-  <section id="redessociais">
-    <div class="apresentacao__links">
-        <h2 class="apresentacao__conteudo__projetos">Conheça mais sobre mim</h2>
-        <!-- Links para redes sociais -->
-        <a class="apresentacao__links__navegacao" href="https://linktr.ee/niicolecruz/">
-            <img src="./imagem/linketree.png" alt="Logo Links"> <!-- Adicione alt para acessibilidade -->            
-        </a>
-    </div>
-</section>
-   
+    
+    <!-- Seção "Certificados e Projetos" -->
     <section id="certificados" class="certificados">
-        <h1 class="apresentacao__conteudo__projetos__titulo">Qualificações</h1>
-        <!-- Links para certificados -->
+        <h1 class="apresentacao__conteudo__projetos__titulo">Qualificações</h1>   </br>  
         <div class="container">
-           <a class="apresentacao__links__qualificacoes" href="https://cursos.alura.com.br/user/nickruz/fullCertificate/b823486e040856b9b89fae03e7f790fc"><img src="./imagem/download.png" alt="download icone"> Formações</a>
-           <a class="apresentacao__links__qualificacoes" href="https://www.dropbox.com/scl/fi/5mg7qdmekyocahj6mjpn9/Nicole-Cruz.jpg?rlkey=lulerfd3mcx5qv5twbhhqdnxe&st=2m44rps0&dl=0"> <img src="./imagem/download.png" alt="download icone"> currículo </a>
+            <a class="apresentacao__links__qualificacoes" href="https://cursos.alura.com.br/user/nickruz/fullCertificate/b823486e040856b9b89fae03e7f790fc">
+                <img src="./imagem/download.png" alt="download icone"> Formações
+            </a>
+            <a class="apresentacao__links__qualificacoes" href="./curriculo.html">
+                <img src="./imagem/download.png" alt="download icone"> Currículo
+            </a>
+            <h2 class="apresentacao__conteudo__projetos__titulo">Confira aqui os meus projetos</h2></br>
+            <!-- Link para GitHub -->
+            <a class="apresentacao__links__qualificacoes" href="https://github.com/nicolecruzz">
+                <img src="./imagem/github.png" alt="Logo GitHub">
+                <a class="apresentacao__links__qualificacoes" href="https://www.instagram.com/imperiobarbeariajau?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                    <img src="./imagem/COROA.png" alt="Insta Barbearia">
+                <a class="contato" href="https://linktr.ee/niicolecruz">CONTATO</a>
+            </a>
         </div> 
     </section>
 
-    <!--carrossel-->
-   <section id="lista__certificados" class="lista__certificado">
-        <div class="carossel">
-    <ul class="image-list">
-      <li class="image-item"><img src="./imagem/HTML_CSS_1.png" width="40" height="20" alt="certificado1"></li>
-      <li class="image-item"><img src="./imagem/HTML_CSS_2.png" width="40" height="20" alt="certificado2"></li>
-      <li class="image-item"><img src="./imagem/HTML_CSS_3.png" width="40" height="20" alt="certificado3"></li>
-      <li class="image-item"><img src="./imagem/HTML_CSS_4.png" width="40" height="20" alt="certificado4"></li>
-      <li class="image-item"><img src="./imagem/HTML_CSS_5.png" width="40" height="20" alt="certificado5"></li>
-      <li class="image-item"><img src="./imagem/git+giHub.png" width="40" height="20" alt="certificado6"></li>
-      <li class="image-item"><img src="./imagem/Logica_1.png" width="40" height="20" alt="certificado7"></li>
-      <li class="image-item"><img src="./imagem/Logica_2.png" width="40" height="20" alt="certificado8"></li>
-      <li class="image-item"><img src="./imagem/csharp.png" width="40" height="20" alt="certificado9"></li>
-      <li class="image-item"><img src="./imagem/Imersão.png" width="40" height="20" alt="certificado10"></li>
-    </ul>
-  </div>
-</section>   
-<!-- Seção "Projetos" -->
-<section id="projetos" class="projetos">
-    <!--<h1 class="apresentacao__conteudo__projetos__titulo">Projetos</h1> -->
-    <h2 class="apresentacao__conteudo__projetos">Confira aqui os meus projetos</h2>
-    <!-- Link para GitHub -->
-    <a class="apresentacao__links__navegacao" href="https://github.com/nicolecruzz">
-        <img src="./imagem/github.png" alt="Logo GitHub"> <!-- Adicione alt para acessibilidade -->
-    </a> 
-</section>
-  
-
-  <!-- Botão "Voltar ao Topo" -->
-  <a href="#" id="link__topo" title="Voltar ao topo">⇮</a>
+    <!-- Botão "Voltar ao Topo" -->
+    <a href="#" id="link__topo" title="Voltar ao topo">⇮</a>
 
     <!-- Seção "Contato" -->
-
     <section id="contato">
-                <footer class="rodape">                    
-                    <a class="link__contato" href="https://linktr.ee/niicolecruz"> 🔗 Contato </a>
-                    <h2 class="titulo_contato"> Desenvolvido por Nicole Cruz</h2>
-                <footer class="rodape">
+        <footer class="rodape">                    
+            <h1 class="creditos">Desenvolvido por Nicole Cruz</h1>
         </footer>
     </section>
-
+    
     <!-- Seu script JavaScript deve ser incluído no final do corpo da página -->
-<script src="./js.js" defer></script>
+    <script src="./js.js" defer></script>
 </body>
 </html>
